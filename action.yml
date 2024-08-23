@@ -1,0 +1,17 @@
+name: '@namnh240795/verify-coverage-action'
+description: 'Verify coverage of your project'
+inputs:
+  threshhold:
+    required: true
+    description: 'The minimum coverage percentage'
+  jsonSummary:
+    required: true
+    description: 'Coverage summary in json format'
+outputs:
+  pass: # id of output
+    description: 'Verify coverage is pass or not'
+  message:
+    description: 'Message of verify coverage'
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
