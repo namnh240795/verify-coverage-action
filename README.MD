@@ -25,8 +25,8 @@ verify-code-coverage:
     name: Verify Coverage
     runs-on: ubuntu-latest
     steps:
-        - uses: namnh240795/verify-branch-name-action@v1.1.1
+        - uses: namnh240795/verify-coverage-action@1.0.1
             with:
                 threshhold: 90
-                jsonSummary: {{ outputs.summary }}
+                jsonSummary: ${{ steps.[step-id].outputs.jsonSummary }}
 ```
