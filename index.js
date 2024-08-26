@@ -1,10 +1,13 @@
 const core = require('@actions/core');
+const fs = require('fs');
 
 try {
     const threshold = core.getInput('threshold');
     const jsonSummary = core.getInput('jsonSummary');
 
-    const coverageData = JSON.parse(jsonSummary);
+    const file = fs.readFileSync(jsonSummary, 'utf8');
+
+    const coverageData = JSON.parse(file);
     let totalStatements = 0;
     let coveredStatements = 0;
   

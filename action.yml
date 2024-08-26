@@ -6,7 +6,7 @@ inputs:
     description: 'The minimum coverage percentage'
   jsonSummary:
     required: true
-    description: 'Coverage summary in json format'
+    description: 'Path to coverage summary in json format'
 outputs:
   pass: # id of output
     description: 'Code Coverage is pass or not'
