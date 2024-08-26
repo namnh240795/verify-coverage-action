@@ -25,7 +25,7 @@ verify-code-coverage:
     name: Verify Coverage
     runs-on: ubuntu-latest
     steps:
-        - uses: namnh240795/verify-coverage-action@1.0.4
+        - uses: namnh240795/verify-coverage-action@1.0.6
             with:
                 threshhold: 90
                 jsonSummary: ${{ github.workspace }}/[path-to]/[your-coverage-final.json]
