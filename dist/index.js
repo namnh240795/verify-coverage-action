@@ -26820,12 +26820,15 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const core = __nccwpck_require__(3033);
+const fs = __nccwpck_require__(7147);
 
 try {
     const threshold = core.getInput('threshold');
     const jsonSummary = core.getInput('jsonSummary');
 
-    const coverageData = JSON.parse(jsonSummary);
+    const file = fs.readFileSync(jsonSummary, 'utf8');
+
+    const coverageData = JSON.parse(file);
     let totalStatements = 0;
     let coveredStatements = 0;
   
